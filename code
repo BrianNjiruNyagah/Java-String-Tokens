@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        //token array declaration
+        String[] tokens;
+
+        //elimination of empty strings
+        if(s.trim().equals("")){
+        tokens=new String[0];
+        }else{
+            //string s spiltting into words only
+            tokens = s.trim().split("([\\s!,?._'@]+)");
+        }
+        System.out.println(tokens.length);
+
+        //token display
+        for(String a:tokens)
+            System.out.println(a);
+
+        scan.close();
+    }
+}
